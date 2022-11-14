@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/jlara65/contact-card#readme",
   "engines": {
-    "node": "8.x"
+    "node": "16.x"
   }
 }
