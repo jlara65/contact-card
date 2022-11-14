@@ -10,9 +10,11 @@
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "cd server && node server.js",
-    "server": "cd server nodemon server.js --ignore client",
+    "server": "cd server node server.js --ignore client",
     "build": "cd client && npm run build",
-    "client": "cd client && npm start"
+    "install": "concurrently \"cd client && npm install\" \"cd server && npm install\" ",
+    "client": "cd client && npm start",
+    "heroku-prebuild": "npm install --dev"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/jlara65/contact-card/issues"
   },
-  "homepage": "https://github.com/jlara65/contact-card#readme"
+  "homepage": "https://github.com/jlara65/contact-card#readme",
+  "engines": {
+    "node": "8.x"
+  }
 }
