@@ -1,6 +1,6 @@
 // Import modules
 import './form';
-import { initDb, getDb, postDb } from './database';
+import { initDb, getDb, postDb, deleteDb } from './database';
 import { fetchCards } from './cards';
 import { toggleForm, clearForm } from './form';
 
@@ -55,4 +55,12 @@ window.addEventListener('load', function () {
     // Reload the DOM
     fetchCards();
   });
+
+  window.deleteCard = (e) => {
+    let id = parseInt(e.id);
+    // Delete the card
+    deleteDb(id);
+    // Reload the DOM
+    fetchCards();
+  };
 });
