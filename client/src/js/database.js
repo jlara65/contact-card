@@ -89,7 +89,7 @@ export const deleteDb = async (id) => {
 export const editDb = async (id, name, email, phone, profile) => {
   console.log('PUT to the database');
 
-  // Create a connect to the IndexedDB databse and version we want to use.
+  // Create a connect to the IndexedDB database and version we want to use.
   const contactDb = await openDB('contact_db', 1);
 
   // Create a new transaction and specify the store and data privileges.

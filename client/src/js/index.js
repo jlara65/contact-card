@@ -1,5 +1,5 @@
 // Import modules
-import './form';
+// import './form';
 import { initDb, getDb, postDb, deleteDb, editDb } from './database';
 import { fetchCards } from './cards';
 import { toggleForm, clearForm } from './form';
@@ -39,7 +39,7 @@ window.addEventListener('load', function () {
     let email = document.getElementById('email').value;
     let profile = document.querySelector('input[type="radio"]:checked').value;
 
-    // Calls the editDB funciton passing in any values from the form element as well as the ID of the contact that we are updating
+    // Calls the editDB function passing in any values from the form element as well as the ID of the contact that we are updating
     editDb(profileId, name, email, phone, profile);
 
     // Post form data to IndexedDB OR Edit an existing card in IndexedDB
@@ -58,6 +58,9 @@ window.addEventListener('load', function () {
     // Reload the DOM
     fetchCards();
   });
+
+  // Card functionality
+  // Adds deleteCard() to the global scope so each card has access to it.
 
   window.deleteCard = (e) => {
     let id = parseInt(e.id);
