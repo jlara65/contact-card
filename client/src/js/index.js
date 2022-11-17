@@ -14,6 +14,26 @@ import Logo from '../images/logo.png';
 import Bear from '../images/bear.png';
 import Dog from '../images/dog.png';
 
+// Install button
+const installBtn = document.getElementById('installBtn');
+
+// create event handler for install button
+window.addEventListener('beforeinstallprompt', (event) => {
+  event.preventDefault();
+  installBtn.style.visibility = 'visible';
+
+  // callback function for disable install button if installed
+  installBtn.addEventListener('click', () => {
+    event.prompt();
+    installBtn.setAttribute('disabled', true);
+    installBtn.textContent = 'Installed!';
+  });
+});
+// event listener to check whether app has been installed
+window.addEventListener('appinstalled', (event) => {
+  console.log('👍', 'appinstalled', event);
+});
+
 // Add images on load
 window.addEventListener('load', function () {
   initDb();
@@ -24,6 +44,7 @@ window.addEventListener('load', function () {
   // Form functionality
   const form = document.getElementById('formToggle');
   const newContactButton = document.getElementById('new-contact');
+
   let submitBtnToUpdate = false;
   let profileId;
 
