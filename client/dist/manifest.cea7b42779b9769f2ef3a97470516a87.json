@@ -1,0 +1,48 @@
+{
+  "icons": [
+    {
+      "src": "./assets/icons/icon_1024x1024.369bc170c0eaf45692699d55357bb42e.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./assets/icons/icon_512x512.a8f75b1db2b20ffa174211542c328724.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/icons/icon_384x384.6242ee29b02372f638d8b55b00bba40f.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/icons/icon_256x256.ace7fab719f54ba1821d337677b1cb7f.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/icons/icon_192x192.cd6127b7fd80e6ca4537de7fbd6515e4.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/icons/icon_128x128.ca44b5895acd1050806506e21f675a7d.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/icons/icon_96x96.0df7d151ce892aa13a2cb125436c6cd6.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Contact Cards Application",
+  "short_name": "Contact Cards",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Keep track of contacts!",
+  "background_color": "#7eb4e2",
+  "state_url": "./"
+}
